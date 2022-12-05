@@ -4,22 +4,24 @@ A file that contains functions for prepare dataset to work
 import numpy as np
 
 
-def get_average(x: int, y: int, mx_x: int, mx_y: int, img: np.ndarray) -> np.ndarray:
+def get_average(center_x: int, center_y: int, mx_x: int, mx_y: int, img: np.ndarray) -> np.ndarray:
     """
-    :param x: col index
-    :param y: row index
+    :param center_x: col index
+    :param center_y: row index
     :param mx_x: col len
     :param mx_y: row len
     :param img: current image from dataset
     :return: average of 8 nearest pixels
     """
 
-    c = 0
-    sm = np.zeros(3)
-    for k in range(x - 1, x + 2, 1):
-        for kk in range(y - 1, y + 2, 1):
-            if k < 0 or kk < 0 or k >= mx_x or kk >= mx_y or (k, kk) == (x, y):
+    count = 0
+    summa = np.zeros(3)
+    for loc_i in range(center_x - 1, center_x + 2, 1):
+        for loc_j in range(center_y - 1, center_y + 2, 1):
+            if (loc_i < 0 or loc_j < 0 or loc_i >= mx_x or loc_j >= mx_y or (
+                    loc_i, loc_j) == (center_x, center_y)
+                ):
                 continue
-            c += 1
-            sm += img[k, kk]
-    return sm / c
+            count += 1
+            summa += img[loc_i, loc_j]
+    return summa / count

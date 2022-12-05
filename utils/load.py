@@ -13,6 +13,6 @@ def load_data(file_name: str) -> np.ndarray:
     :return: read dataset
     """
 
-    with open(file_name, 'rb') as f:
-        df = pickle.load(f)
-    return df['images'].astype('int')
+    with open(file_name, 'rb') as input_file :
+        dataframe = pickle.load(input_file)
+    return dataframe['images'].astype('int')

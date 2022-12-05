@@ -1,3 +1,6 @@
+"""Mine File"""
+
+
 from utils.load import load_data
 from utils.handlers import get_average
 
