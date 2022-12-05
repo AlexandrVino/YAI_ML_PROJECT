@@ -1,6 +1,8 @@
 """
 A file that contains functions for prepare dataset to work
 """
+import numpy as np
+
 
 def get_average(x: int, y: int, mx_x: int, mx_y: int, img: np.ndarray) -> np.ndarray:
     """
