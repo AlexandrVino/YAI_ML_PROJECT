@@ -19,8 +19,7 @@ def get_average(center_x: int, center_y: int, mx_x: int, mx_y: int, img: np.ndar
     for loc_i in range(center_x - 1, center_x + 2, 1):
         for loc_j in range(center_y - 1, center_y + 2, 1):
             if (loc_i < 0 or loc_j < 0 or loc_i >= mx_x or loc_j >= mx_y or (
-                    loc_i, loc_j) == (center_x, center_y)
-                ):
+                    loc_i, loc_j) == (center_x, center_y)):
                 continue
             count += 1
             summa += img[loc_i, loc_j]
