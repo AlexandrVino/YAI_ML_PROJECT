@@ -127,6 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-data_train
+DATA/data_train
 meta
-data_test
+DATA/data_test
+DATA/arr.np.ndarray

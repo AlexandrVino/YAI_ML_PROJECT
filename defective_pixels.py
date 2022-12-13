@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def defective_pixels(images_data):
     for im in range(len(images_data)):
         for row in range(1, len(images_data[im]) - 1):

@@ -5,7 +5,7 @@ from utils.load import load_data
 from utils.handlers import get_average
 
 
-arr = load_data('data_train')
+arr = load_data('DATA/data_train')
 broken_pixels = [{0}, {255}]
 for i, image in enumerate(arr):
     mx_x, mx_y, _ = image.shape
