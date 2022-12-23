@@ -128,6 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 DATA/data_train
-meta
+DATA/meta
 DATA/data_test
 DATA/arr.np.ndarray
+DATA/arrtest.np.ndarray
+data.zip
